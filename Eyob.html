@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chemistry Quiz</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    .question {
+      margin-bottom: 10px;
+    }
+    .answer {
+      margin-bottom: 20px;
+    }
+    .answer button {
+      padding: 10px 20px;
+      margin: 5px;
+      background-color: #4CAF50; /* Green */
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .answer button.incorrect {
+      background-color: #f44336; /* Red */
+    }
+  </style>
+</head>
+<body>
+
+<h1>Chemistry Quiz</h1>
+
+<div class="question">
+  <h2>Question 1:</h2>
+  <p>What is the chemical symbol for oxygen?</p>
+</div>
+
+<div class="answer">
+  <button onclick="checkAnswer(this, 'O')">O</button>
+  <button onclick="checkAnswer(this, 'H')">H</button>
+  <button onclick="checkAnswer(this, 'C')">C</button>
+  <button onclick="checkAnswer(this, 'N')">N</button>
+</div>
+
+<!-- Add 99 more question and answer divs here, following the same pattern -->
+
+<script>
+  function checkAnswer(button, correctAnswer) {
+    if (button.textContent === correctAnswer) {
+      button.classList.add('correct');
+    } else {
+      button.classList.add('incorrect');
+      // You can add functionality here to highlight the correct answer if needed
+    }
+  }
+</script>
+
+</body>
+</html>
